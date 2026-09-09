@@ -1,0 +1,14 @@
+Phase,EDA_Component,Finding,Research_Implication
+EDA-1,Class Distribution,"Training dataset contains 6,289 Benign images (52.94%) and 5,590 Malignant images (47.06%).",The training dataset is relatively balanced; severe class imbalance is not present.
+EDA-1,Test Distribution,"Test dataset contains 1,000 Benign and 1,000 Malignant images.",The test dataset is perfectly balanced.
+EDA-2,Visual Exploration,"Both classes show substantial variation in lesion size, shape, pigmentation, texture, surrounding skin, illumination, and acquisition conditions.",The dataset contains substantial intra-class visual variation.
+EDA-2,Class Visual Overlap,Some Benign and Malignant images have visually similar general characteristics.,Classification cannot be assumed to depend on one simple visual feature.
+EDA-2,Image Artifacts,"Some images contain hairs, measurement markings, circular dermoscopic fields, and varying backgrounds.",Preprocessing and augmentation should account for acquisition-related variation.
+EDA-3,Image Dimensions,All analyzed training images are 224×224 pixels with an aspect ratio of 1.0.,Images already have a standardized spatial resolution.
+EDA-3,Brightness,"Benign images generally have higher mean brightness, while Malignant images are generally shifted toward lower brightness. Considerable overlap remains.",Brightness is a dataset-level characteristic and should not be treated as a standalone diagnostic feature.
+EDA-3,Contrast,Malignant images show a broader distribution of pixel-intensity variation than Benign images.,Normalization and augmentation may help the models handle acquisition variation.
+EDA-3,RGB Statistics,"RGB channel means differ between the two classes, particularly in the Red channel.","Color characteristics may provide useful information, but may also reflect dataset/acquisition bias."
+EDA-4,Outlier Analysis,"IQR analysis identified statistical outliers in brightness, contrast, and RGB statistics.",Statistical outlier status alone is insufficient justification for removing an image.
+EDA-4,Visual Outlier Inspection,Representative extreme images were visually inspected and were found to be valid dermoscopic images rather than clearly corrupted images.,No images should be removed solely because they are statistical outliers.
+Phase 1,Exact Duplicate Check,No exact train-test duplicates were identified using exact image hashing.,No evidence of exact train-test image duplication was found.
+Phase 1,Near-Duplicate Check,Highly similar pHash candidates were identified; the strongest candidates were manually inspected and no visually identical or near-identical pairs were observed among the inspected samples.,No apparent train-test leakage was identified through the conducted duplicate/near-duplicate checks.

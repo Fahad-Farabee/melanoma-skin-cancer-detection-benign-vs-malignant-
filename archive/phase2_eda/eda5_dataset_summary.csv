@@ -1,0 +1,5 @@
+Split,Class,Image_Count,Percentage
+Train,Benign,6289,52.94
+Train,Malignant,5590,47.06
+Test,Benign,1000,50.0
+Test,Malignant,1000,50.0
