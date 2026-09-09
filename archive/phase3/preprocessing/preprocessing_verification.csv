@@ -1,0 +1,10 @@
+check_type,split,image,image_count,benign_count,malignant_count,missing_images,corrupted_images,non_rgb_images,wrong_dimensions,label_mapping_errors,status
+manifest,train,,9503,5031,4472,0,0,0,0,0,PASS
+manifest,validation,,2376,1258,1118,0,0,0,0,0,PASS
+manifest,test,,2000,1000,1000,0,0,0,0,0,PASS
+transform,training_sample,D:\university\summer 26\Data Mining\research project\archive\train\Benign\1268.jpg,,,,,,,,,PASS
+transform,training_sample,D:\university\summer 26\Data Mining\research project\archive\train\Benign\2889.jpg,,,,,,,,,PASS
+transform,training_sample,D:\university\summer 26\Data Mining\research project\archive\train\Benign\793.jpg,,,,,,,,,PASS
+transform,training_sample,D:\university\summer 26\Data Mining\research project\archive\train\Malignant\1083.jpg,,,,,,,,,PASS
+transform,training_sample,D:\university\summer 26\Data Mining\research project\archive\train\Malignant\225.jpg,,,,,,,,,PASS
+transform,training_sample,D:\university\summer 26\Data Mining\research project\archive\train\Malignant\4992.jpg,,,,,,,,,PASS

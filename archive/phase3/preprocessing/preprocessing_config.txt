@@ -1,0 +1,39 @@
+PHASE 3.2 - DEEP LEARNING PREPROCESSING CONFIGURATION
+============================================================
+
+Models:
+- ResNet50
+- EfficientNet-B0
+- MobileNetV2
+- Vision Transformer (ViT)
+
+Input:
+- RGB
+- 224 x 224 pixels
+
+Training augmentation:
+- RandomHorizontalFlip(p=0.5)
+- RandomVerticalFlip(p=0.5)
+- RandomRotation(degrees=15)
+- RandomAffine(translation=5%, scale=0.95-1.05)
+- ColorJitter(brightness=0.10, contrast=0.10, saturation=0.10, hue=0.02)
+
+Validation/Test augmentation:
+- None
+
+Normalization:
+- Mean: [0.485, 0.456, 0.406]
+- Std: [0.229, 0.224, 0.225]
+
+Class/Label mapping:
+- Benign = 0
+- Malignant = 1
+
+Reproducibility seed:
+- 42
+
+Important:
+- Original images are not modified.
+- Augmentation should be applied on-the-fly during model training.
+- Validation and test images must remain unaugmented.
+- Saved augmented images are for visual verification only.
