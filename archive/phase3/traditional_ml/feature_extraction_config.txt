@@ -1,0 +1,54 @@
+PHASE 3.3 - TRADITIONAL ML FEATURE EXTRACTION
+=================================================================
+
+Purpose:
+Convert dermoscopic images into handcrafted numerical features for traditional ML models.
+
+Target models:
+- Logistic Regression
+- Support Vector Machine (SVM)
+- Random Forest
+
+Input:
+- RGB images
+- 224 x 224 pixels
+- Original images only
+- No augmentation
+
+Feature Group 1 - RGB Histogram:
+- Bins per channel: 32
+- Red features: 32
+- Green features: 32
+- Blue features: 32
+- Total RGB features: 96
+
+Feature Group 2 - LBP:
+- Points: 8
+- Radius: 1
+- Method: uniform
+- Total LBP features: 10
+
+Feature Group 3 - HOG:
+- Orientations: 9
+- Pixels per cell: (16, 16)
+- Cells per block: (2, 2)
+- Block normalization: L2-Hys
+- Total HOG features: 6084
+
+Combined feature vector:
+- Total features: 6190
+
+Scaling:
+- Features are stored UNSCALED.
+- Scaling will be performed in Phase 3.4.
+- StandardScaler must be fitted only on training features.
+- The same fitted scaler will be applied to validation/test data.
+
+Class/label mapping:
+- Benign = 0
+- Malignant = 1
+
+Data leakage protection:
+- Feature extraction uses each split independently.
+- No validation/test information is used to calculate training statistics.
+- Scaling is intentionally deferred to Phase 3.4.

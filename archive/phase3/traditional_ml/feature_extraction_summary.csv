@@ -1,0 +1,4 @@
+split,input_images,feature_rows,feature_columns,rgb_features,lbp_features,hog_features,combined_features,failed_images,processing_time_seconds,status
+train,9503,9503,6193,96,10,6084,6190,0,169.32,PASS
+validation,2376,2376,6193,96,10,6084,6190,0,35.35,PASS
+test,2000,2000,6193,96,10,6084,6190,0,28.36,PASS
