@@ -1,0 +1,28 @@
+PHASE 3.4 - FEATURE SCALING CONFIGURATION
+=========================================
+
+Feature source:
+Phase 3.3 RGB + LBP + HOG features
+
+Total features: 6190
+
+Scaling method:
+StandardScaler
+
+Formula:
+z = (x - mean) / standard_deviation
+
+Data leakage prevention:
+Scaler fitted ONLY on training features.
+Validation and test features were transformed
+using the same training-fitted scaler.
+
+Training samples: 9503
+Validation samples: 2376
+Test samples: 2000
+
+Feature groups:
+RGB Histogram: 96
+LBP Texture: 10
+HOG: 6084
+Combined: 6190

@@ -1,0 +1,4 @@
+split,samples,features,benign,malignant,scaling,scaler_fitted_on
+train,9503,6190,5031,4472,StandardScaler,train
+validation,2376,6190,1258,1118,StandardScaler,train
+test,2000,6190,1000,1000,StandardScaler,train
